@@ -1,4 +1,4 @@
-package com.example.the_football_world_cup.ui.champ;
+package com.example.the_football_world_cup.champ;
 
 import android.os.Bundle;
 

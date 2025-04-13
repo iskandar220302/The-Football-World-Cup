@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="32dp">
+
+    <Button
+        android:id="@+id/btnUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Войти как пользователь" />
+
+    <Button
+        android:id="@+id/btnModerator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Войти как модератор"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

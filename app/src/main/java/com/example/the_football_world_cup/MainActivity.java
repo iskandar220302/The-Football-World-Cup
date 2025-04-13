@@ -1,22 +1,40 @@
 package com.example.the_football_world_cup;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.the_football_world_cup.ui.champ.championship_Activity;
-import com.example.the_football_world_cup.ui.match.Match_Activity;
-import com.example.the_football_world_cup.ui.table.table_Activity;
-import com.example.the_football_world_cup.ui.team.team_Activity;
+import com.example.the_football_world_cup.champ.championship_Activity;
+import com.example.the_football_world_cup.match.Match_Activity;
+import com.example.the_football_world_cup.table.table_Activity;
+import com.example.the_football_world_cup.team.team_Activity;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+        SharedPreferences prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+        boolean isFirstLaunch = prefs.getBoolean("isFirstLaunch", true);
+
+        if (isFirstLaunch) {
+            // Запоминаем, что авторизация уже была
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putBoolean("isFirstLaunch", false);
+            editor.apply();
+
+            // Запуск LoginActivity
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+            finish(); // Закрываем текущую MainActivity
+            return;   // Выходим из метода, чтобы setContentView не сработал
+        }
+
+        setContentView(R.layout.activity_main); // Показываем основное меню
     }
 
     public void championshipActivity(View v) {

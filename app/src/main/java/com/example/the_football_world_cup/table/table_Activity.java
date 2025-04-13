@@ -1,4 +1,4 @@
-package com.example.the_football_world_cup.ui.table;
+package com.example.the_football_world_cup.table;
 
 import android.os.Bundle;
 
