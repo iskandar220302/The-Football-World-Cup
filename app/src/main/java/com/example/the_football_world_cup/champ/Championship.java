@@ -1,9 +1,9 @@
 package com.example.the_football_world_cup.champ;
 
 public class Championship {
-    private String year;
-    private String country;
-    private String winner;
+    private String year; // год проведения ЧМ
+    private String country; // место проведения ЧМ
+    private String winner; // победитель турнира
 
     public Championship(String year, String country, String winner){
         this.year = year;

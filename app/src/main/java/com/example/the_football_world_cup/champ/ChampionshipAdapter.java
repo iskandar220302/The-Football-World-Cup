@@ -23,8 +23,7 @@ public class ChampionshipAdapter extends RecyclerView.Adapter<ChampionshipAdapte
     @NonNull
     @Override
     public ChampionshipViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.championship_item, parent, false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.championship_item, parent, false);
         return new ChampionshipViewHolder(itemView);
     }
 

@@ -1,26 +1,26 @@
 package com.example.the_football_world_cup.table;
 
-public class table {
-    private int place_table;
-    private String name_team;
+public class TeamTable {
+    private int place;
+    private String teamName;
     private int wins;
     private int losses;
     private int points;
 
-    public table(int place_table, String name_team, int wins, int losses, int points){
-        this.place_table = place_table;
-        this.name_team = name_team;
+    public TeamTable(int place, String teamName, int wins, int losses, int points) {
+        this.place = place;
+        this.teamName = teamName;
         this.wins = wins;
         this.losses = losses;
         this.points = points;
     }
 
-    public int getPlace_table() {
-        return place_table;
+    public int getPlace() {
+        return place;
     }
 
-    public String getName_team() {
-        return name_team;
+    public String getTeamName() {
+        return teamName;
     }
 
     public int getWins() {

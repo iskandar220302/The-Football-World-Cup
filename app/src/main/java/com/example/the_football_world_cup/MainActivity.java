@@ -2,6 +2,7 @@ package com.example.the_football_world_cup;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 
@@ -25,7 +26,9 @@ public class MainActivity extends AppCompatActivity {
             // Запоминаем, что авторизация уже была
             SharedPreferences.Editor editor = prefs.edit();
             editor.putBoolean("isFirstLaunch", false);
-            editor.apply();
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.GINGERBREAD) {
+                editor.apply();
+            }
 
             // Запуск LoginActivity
             Intent intent = new Intent(this, LoginActivity.class);

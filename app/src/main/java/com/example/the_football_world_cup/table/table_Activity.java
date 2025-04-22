@@ -14,6 +14,5 @@ public class table_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_table);
-
     }
 }
