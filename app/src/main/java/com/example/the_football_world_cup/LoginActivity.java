@@ -16,9 +16,11 @@ public class LoginActivity extends AppCompatActivity {
 
         Button userButton = findViewById(R.id.btnUser);
         Button moderatorButton = findViewById(R.id.btnModerator);
+        Button journalistButton = findViewById(R.id.btnJournalist);
 
         userButton.setOnClickListener(v -> loginAs("user"));
         moderatorButton.setOnClickListener(v -> loginAs("moderator"));
+        journalistButton.setOnClickListener(v -> loginAs("journalist"));
     }
 
     private void loginAs(String role) {

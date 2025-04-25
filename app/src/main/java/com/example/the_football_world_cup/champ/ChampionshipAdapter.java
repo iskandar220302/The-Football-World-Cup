@@ -1,5 +1,6 @@
 package com.example.the_football_world_cup.champ;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +15,7 @@ import java.util.List;
 
 public class ChampionshipAdapter extends RecyclerView.Adapter<ChampionshipAdapter.ChampionshipViewHolder> {
 
-    private List<Championship> championshipList;
+    private final List<Championship> championshipList;
 
     public ChampionshipAdapter(List<Championship> championshipList) {
         this.championshipList = championshipList;
@@ -27,6 +28,7 @@ public class ChampionshipAdapter extends RecyclerView.Adapter<ChampionshipAdapte
         return new ChampionshipViewHolder(itemView);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull ChampionshipViewHolder holder, int position) {
         Championship championship = championshipList.get(position);
